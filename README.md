@@ -58,13 +58,18 @@ For both models train sample consists of all data before the 1st of April and te
 
 To run app in virtual environment firstly connect to virtual machine and go to the necessary folder. Then install and activate virtual environment with the following commands:
 >sudo apt install python3.8-venv
+>
 >python3 -m venv env
+>
 >source env/bin/activate
 
 As the next step, install all the necessary packages:
 >pip install numpy
+>
 >pip install flask
+>
 >pip install joblib
+>
 >pip install sklearn
 
 Now run app:
@@ -74,13 +79,20 @@ Now run app:
 
 It contains instructions for building the docker container:
 > from ubuntu:20.04
-MAINTAINER Anna Lisitcyna
-RUN apt-get update -y
-COPY . /opt/final_project
-WORKDIR /opt/final_project
-RUN apt install -y python3-pip
-RUN pip3 install -r requirements.txt
-CMD python3 app.py
+> 
+> MAINTAINER Anna Lisitcyna
+> 
+> RUN apt-get update -y
+> 
+> COPY . /opt/final_project
+> 
+> WORKDIR /opt/final_project
+> 
+> RUN apt install -y python3-pip
+> 
+> RUN pip3 install -r requirements.txt
+> 
+> CMD python3 app.py
 
 #  Port in remote VM
 
